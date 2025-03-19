@@ -1,0 +1,129 @@
+.contact-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+  }
+
+  .form-container {
+    width: 50%;
+    max-width: 600px; /* Set maximum width for larger screens */
+    padding: 16px;
+    display: flex;
+    flex-direction: column; /* Makes the form elements stack in a column */
+    justify-content: center; /* Vertically centers content within the container */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Adds space between form elements */
+  }
+  
+  
+  .form-container {
+    width: 50%;
+    max-width: 600px;
+    /* Set maximum width for larger screens */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .form-field {
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding: 16px;
+    display: flex;
+    width: 50%;
+    margin-right: 10px;
+  }
+  
+  .submit-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #82b1ff;
+    align-self: center;
+    /* Align submit button to the right on larger screens */
+    width: auto;
+    /* Default width for desktop */
+    margin-top: 20px;
+    /* Add some margin above the button */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 8px;
+    }
+  
+    .form-field {
+      margin-bottom: 12px;
+    }
+  
+    .submit-btn {
+      width: 100%;
+      /* Full width for mobile screens */
+      align-self: stretch;
+      /* Stretch the button across the screen */
+      margin-top: 16px;
+      /* Make some space above the button */
+    }
+  }
+  
+  /* For two column */
+  .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .text-column {
+    flex: 1;
+  }
+  
+  .text-column h1 {
+    font-size: 2rem;
+    color: #1e88e5;
+  }
+  
+  .text-column h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .text-column p {
+    font-size: 2rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .image-column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
