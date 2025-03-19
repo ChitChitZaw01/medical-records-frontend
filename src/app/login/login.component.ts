@@ -21,6 +21,7 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe(
       (response) => {
         this.authService.saveToken(response.access_token);
+        console.log('Access token = ' + response.access_token);
         this.router.navigate(['/dashboard']); // Redirect to a protected route
       },
       (error) => {
