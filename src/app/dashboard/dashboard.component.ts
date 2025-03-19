@@ -25,15 +25,11 @@ export class DashboardComponent {
 
 
   constructor(private http: HttpClient) {}
-
-  message = 'Welcome to your Dashboard!';
-
   
   ngOnInit() {
-    // Fetch players data on component initialization
     this.getRecords().subscribe(
       (data) => {
-        this.records = data;  // Store the players data
+        this.records = data;  
       },
       (error) => {
         console.error('Error fetching records data:', error);

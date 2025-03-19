@@ -14,9 +14,11 @@ import { MatInputModule } from '@angular/material/input';
 })
 
 export class LoginComponent {
+
   username: string = '';
   password: string = '';
   errorMessage: string = '';
+  role: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -26,6 +28,9 @@ export class LoginComponent {
         this.authService.saveToken(response.access_token);
         console.log('Access token = ' + response.access_token);
         this.router.navigate(['/dashboard']); 
+        // this.router.navigate(['/dashboard',this.role]); 
+
+
       },
       (error) => {
         this.errorMessage = 'Invalid credentials';
