@@ -1,17 +1,31 @@
-<div class="dashboard">
-    <h2>{{ message }}</h2>
+<div class="row card card-margin"  style="justify-content: center;">
+ <div style="margin-top: 0%;">
+  <div class="card-body" style="margin-left: 1%;margin-top: 0.5%; width: 800px;height: 5px;margin-bottom: 3%;">
+      <div class="row">
+          <span class="default-header-2" style="margin-top: 0px;margin-bottom: 20%;"  >Record List</span>
+      </div>
   </div>
-
-  <p>players works!</p>
-  <div *ngIf="records.length > 0; else noData">
-    <div *ngFor="let record of records">
-      <h3>{{ record.diagnosis }}</h3>
-      <!-- <img [src]="player.imgURL" alt="{{ player.name }}">
-      <p>{{ player.info }}</p> -->
-    </div>
+ </div>
+  <div class="row" style="margin: 0.2% 0.1% 0.2% 0.1%">
+      <table class="table" style="padding-right: 1%;">
+          <thead>
+              <tr>
+                  <th scope="col">patient_id</th>
+                  <th scope="col">doctor_id</th>
+                  <th scope="col">diagnosis</th>
+                  <th scope="col">treatment</th>
+                  <th scope="col">created_at</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let record of records;">
+                  <td>{{record.patient_id}}</td>
+                  <td>{{record.doctor_id}}</td>
+                  <td>{{record.diagnosis}}</td>
+                  <td>{{record.treatment}}</td>
+                  <td>{{record.created_at}}</td>
+              </tr>
+          </tbody> 
+      </table>
   </div>
-
-  <ng-template #noData>
-    <p>No players found</p>
-  </ng-template>
-  
+</div>
