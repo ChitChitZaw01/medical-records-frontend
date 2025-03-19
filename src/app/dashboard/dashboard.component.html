@@ -1,5 +1,17 @@
-<!-- src/app/dashboard/dashboard.component.html -->
 <div class="dashboard">
     <h2>{{ message }}</h2>
   </div>
+
+  <p>players works!</p>
+  <div *ngIf="records.length > 0; else noData">
+    <div *ngFor="let record of records">
+      <h3>{{ record.diagnosis }}</h3>
+      <!-- <img [src]="player.imgURL" alt="{{ player.name }}">
+      <p>{{ player.info }}</p> -->
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <p>No players found</p>
+  </ng-template>
   
